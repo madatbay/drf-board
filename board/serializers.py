@@ -7,6 +7,7 @@ class NewsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = News
         fields = ["title", "url", "upvotes", "author", "created_at"]
+        read_only_fields = ["upvotes"]
 
 
 class CommentSerializer(serializers.HyperlinkedModelSerializer):

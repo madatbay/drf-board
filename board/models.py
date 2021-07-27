@@ -4,7 +4,7 @@ from django.db import models
 class News(models.Model):
     title = models.CharField("Title", max_length=50)
     link = models.URLField("URL", max_length=200)
-    upvotes = models.PositiveIntegerField("Upvotes")
+    upvotes = models.PositiveIntegerField("Upvotes", null=True, default=0)
     author = models.CharField("Author name", max_length=50)
     created_at = models.DateTimeField("Creation date", auto_now_add=True)
 
