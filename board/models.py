@@ -18,6 +18,7 @@ class News(models.Model):
 
 
 class Comment(models.Model):
+    news = models.ForeignKey("board.News", on_delete=models.CASCADE)
     author_name = models.CharField("Author", max_length=50)
     content = models.TextField("Comment")
     created_at = models.DateTimeField("Creation date", auto_now_add=True)
