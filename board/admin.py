@@ -4,9 +4,11 @@ from .models import News, Comment
 
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
-    pass
+    search_fields = ("title", "author", "created_at")
+    list_filter = ("author", "created_at")
 
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    pass
+    search_fields = ("author_name", "content")
+    list_filter = ("author_name", "created_at")
