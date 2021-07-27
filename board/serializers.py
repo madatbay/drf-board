@@ -13,4 +13,4 @@ class NewsSerializer(serializers.HyperlinkedModelSerializer):
 class CommentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Comment
-        fields = ["author_name", "content", "created_at"]
+        fields = ["news", "author_name", "content", "created_at"]
