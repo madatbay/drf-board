@@ -5,6 +5,7 @@ from rest_framework.decorators import api_view
 from .models import Comment, News
 from .serializers import CommentSerializer, NewsSerializer
 
+
 class NewsViewSet(viewsets.ModelViewSet):
     queryset = News.objects.all().order_by("-created_at")
     serializer_class = NewsSerializer
