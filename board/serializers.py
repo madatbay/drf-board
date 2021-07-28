@@ -6,7 +6,7 @@ from .models import Comment, News
 class CommentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Comment
-        fields = ["news", "author_name", "content", "created_at"]
+        fields = ["id", "news", "author_name", "content", "created_at"]
 
 
 class NewsSerializer(serializers.HyperlinkedModelSerializer):
@@ -14,5 +14,5 @@ class NewsSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = News
-        fields = ["title", "link", "upvotes", "author", "created_at", "comments"]
+        fields = ["id", "title", "link", "upvotes", "author", "created_at", "comments"]
         read_only_fields = ["upvotes"]
