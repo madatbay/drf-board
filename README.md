@@ -1,4 +1,4 @@
-# drf-board
+# News Board API
 News Board Rest Framework with  Celery, Redis, Docker, Postgresql 
 
 ---
