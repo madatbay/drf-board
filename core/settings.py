@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'board.apps.BoardConfig',
     # 3-rd
     'rest_framework',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,13 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Manual celery task can be run with this
+# from celery.schedules import crontab
+# 
+# CELERY_BEAT_SCHEDULE = {
+#     "scheduled_task": {
+#         "task": "board.tasks.reset_upvotes",
+#         "schedule": crontab(hour=00, minute=59),
+#     },
+# }
